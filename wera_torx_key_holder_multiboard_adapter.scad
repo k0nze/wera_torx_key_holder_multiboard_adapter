@@ -89,7 +89,6 @@ module wera_footprint(h) {
             }
 
             // left bottom
-            // DELETE!
             translate([holder_radius_0, 0, 0]) {
                 cylinder(h=holder_height, r1=holder_radius_0, r2=holder_radius_0, center=true);
             }
@@ -154,9 +153,6 @@ module multiboard_holder_footprint(h) {
 union() {
     difference() {
         multiboard_holder_footprint(multiboard_holder_height);
-        //translate([holder_width/2,-5,0]) {
-        //    cube([multiboard_holder_width, holder_depth+5.4*2, multiboard_holder_height], center=true);
-        //}
 
         wera_footprint(h=multiboard_holder_height+2);
 
@@ -200,6 +196,4 @@ union() {
         }
     }
 } // end union
-
-
 
